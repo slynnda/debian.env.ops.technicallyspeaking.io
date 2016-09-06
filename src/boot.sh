@@ -9,16 +9,11 @@ MY_PROJECT_NAME=`printenv DEVSHELL_PROJECT_ID | sed 's/-io//g'` && export MY_PRO
 MY_EMAIL=$MY_NAME@$MY_PROJECT_DOMAIN && export MY_EMAIL
 MY_ENVIRONMENT_ID=`uname -a | md5sum | cut -f1 -d" "` && export MY_ENVIRONMENT_ID
 
-# Create an SSH key-pair to identify the user with this environment:
-SSH_KEY_DIR=~/.ssh/$MY_PROJECT_NAME
-SSH_KEY_FILE=$MY_NAME.$MY_ENVIRONMENT_ID.$MY_PROJECT_DOMAIN.id.rsa
-mkdir -p $SSH_KEY_DIR
-ssh-keygen -t rsa -b 4069 -C "$MY_NAME@env-$MY_ENVIRONMENT_ID.$MY_PROJECT_DOMAIN" -f $SSH_KEY_DIR/$SSH_KEY_FILE
-eval $(ssh-agent -s) && ssh-add
-
 # Setup Git user information:
 git config --global user.name "$MY_NAME"
 git config --global user.email "$MY_EMAIL"
+
+# TODO: Figure out how to use enable SSH instead of using HTTPS.
 
 # Clone projects from GitHub:
 GITHUB_DIR=~/github/$MY_PROJECT_NAME
