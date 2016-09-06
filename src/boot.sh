@@ -23,9 +23,8 @@ git config --global user.email "$MY_EMAIL"
 # Clone projects from GitHub:
 GITHUB_DIR=~/github/$MY_PROJECT_NAME
 mkdir -p $GITHUB_DIR
-gcloud source repos clone debian-env-ops $GITHUB_DIR/debian-env-ops
-#git clone git@github.com:technicallyspeaking/debian.env.ops.technicallyspeaking.io.git $GITHUB_DIR/debian-env-ops
-#git clone git@github.com:technicallyspeaking/nodejs.ops.technicallyspeaking.io.git $GITHUB_DIR/nodejs-ops
-#git clone git@github.com:technicallyspeaking/markdown.content.technicallyspeaking.io.git $GITHUB_DIR/markdown-content
-#git clone git@github.com:technicallyspeaking/web.client.technicallyspeaking.io.git $GITHUB_DIR/web-client
-#git clone git@github.com:technicallyspeaking/web.server.technicallyspeaking.io.git $GITHUB_DIR/web-server
+git clone https://github.com/technicallyspeaking/debian.env.ops.technicallyspeaking.io.git $GITHUB_DIR/debian-env-ops
+git clone https://github.com/technicallyspeaking/nodejs.ops.technicallyspeaking.io.git $GITHUB_DIR/nodejs-ops
+git clone https://github.com/technicallyspeaking/markdown.content.technicallyspeaking.io.git $GITHUB_DIR/markdown-content
+git clone https://github.com/technicallyspeaking/web.client.technicallyspeaking.io.git $GITHUB_DIR/web-client
+git clone https://github.com/technicallyspeaking/web.server.technicallyspeaking.io.git $GITHUB_DIR/web-server
