@@ -2,4 +2,8 @@
 
 # Executes project-level environmental configuration and boot sequence for user
 
-echo "Got the file"
+PROJECT_NAME=technicallyspeaking.io
+
+echo "Installing $PROJECT_NAME development environment for Google Cloud Platform"
+
+echo "Finished installing $PROJECT_NAME development environment for Google Cloud Platform"
